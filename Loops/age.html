@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+Enter Your Age : <input id="myage">
+<button onclick="myfunction()">Click Me</button>
+
+<p id="text"></p>
+
+<script>
+	function myfunction(){
+		var age;
+		age = Number(document.getElementById("myage").value);
+		if(age<18){
+			age = "Under 18";
+		}
+		else{
+			age ="You are adult";
+		}
+		document.getElementById('text').innerHTML=age;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation Form</title>
+
+<style>
+
+	table{
+		background-color: #cccecf;
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding:2%;
+		margin-top: 2%;
+		opacity: 0.8;
+		border-radius: 4px;
+	}
+	input{
+		width: 98%;
+		padding: 10px 0px 10px 10px;
+		margin-bottom: 30px;
+		border-radius: 4px;
+		border:none;
+		background-color: #fff;
+	}
+	.btn{
+		background-color: #000066;
+		width: 99.5%;
+		border-radius: 4px;
+		color: #fff;
+	}
+	.btn:hover{
+		background-color: #660033;
+		width: 99.5%;
+	}
+
+</style>
+
+</head>
+<body style=" background: linear-gradient(to right, #660033 21%, #000066 70%);">
+
+
+<form>
+	<table>
+
+<center><h2 style="color: lightblue;"><br>REGISTRATION FORM</h2></center>
+
+		<tbody>
+		<tr>
+			<td>
+			<br><input type="text" name="name" id="name_id" onkeyup="clearmsg('sp1')" type="text" placeholder="Enter your name"><span id="sp1" style="color: red;"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input name="mobile" id="mob_id" onkeyup="clearmsg('sp2')" type="text" placeholder="Enter your Mobile Number"><span id="sp2" style="color: red;"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="email" name="email" id="mail_id" onkeyup="clearmsg('sp3')" placeholder="Enter your email"><span id="sp3" style="color: red;"></span>
+			</td>
+		</tr>
+		<tr>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="text" name="user" id="user_id" onkeyup="clearmsg('sp4')" placeholder="Enter your user_id"><span id="sp4" style="color: red;"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="password" maxlength="8" name="password" id="password_id" onkeyup="clearmsg('sp5')" placeholder="Enter your password"><span id="sp5" style="color: red;"></span>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="button" name="submit" value="Submit" onclick="validate()"  class="btn"></td>
+		</tr>
+		</tbody>
+	</table>
+</form>
+	
+
+</body>
+
+<script>
+	function validate(){
+		name=document.getElementById('name_id').value;
+		mobile=document.getElementById('mob_id').value;
+		email=document.getElementById('mail_id').value;
+		user=document.getElementById('user_id').value;
+		password=document.getElementById('password_id').value;
+
+		if(name=="")
+		{
+			document.getElementById("sp1").innerHTML="* enter name";
+			return false;
+		}
+		if(mobile=="")
+		{
+			document.getElementById("sp2").innerHTML="* enter mobile number";
+			return false;
+		}
+		if(email=="")
+		{
+			document.getElementById("sp3").innerHTML="* enter email";
+			return false;
+		}
+		if(user=="")
+		{
+			document.getElementById("sp4").innerHTML="* Enter your user name";
+			return false;
+		}
+		if(password=="")
+		{
+			document.getElementById("sp5").innerHTML="* enter password";
+			return false;
+		}
+
+	}
+	function clearmsg(sp){
+		document.getElementById(sp).innerHTML="";
+	}
+</script>
+
+
+</html>

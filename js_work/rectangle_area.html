@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rectangle</title>
+</head>
+<body>
+
+	<input type="text" id="l" placeholder="Enter length">
+<input type="text" id="h" placeholder="Enter height">
+<input type="button" value="Calculate" id="btnCalc">
+ 
+<p id="result"></p>
+
+
+ 
+<script>
+ 
+function area(){
+    var length=document.getElementById("l").value;
+    var width=document.getElementById("h").value;
+    var result=document.getElementById("result");
+ 
+    length=Number(length);
+    width=Number(width);
+ 
+    let area=length*width;
+    result.innerHTML="Area of Rectangle:"+area  
+}
+ 
+ 
+var btnCalc=document.getElementById("btnCalc");
+btnCalc.onclick=area;
+</script>
+
+</body>
+</html>

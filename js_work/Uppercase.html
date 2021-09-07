@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uppercase</title>
+</head>
+<body>
+
+	<p id="uppercase"></p>
+	<p id="lowercase"></p>
+	<button type="button" onclick="myfunction()">UpperCase</button>
+	<button type="button" onclick="lower()">LowerCase</button>
+
+	<script>
+		function myfunction(){
+			var str="Change the text to Uppercase";
+			var res=str .toUpperCase();
+			document.getElementById('uppercase').innerHTML=res;
+		}
+	</script>
+
+	<script>
+		function lower(){
+			var str="change the text to LOWERCASE";
+			var res=str.toLowerCase();
+			document.getElementById('lowercase').innerHTML=res;
+		}
+	</script>
+
+</body>
+</html>

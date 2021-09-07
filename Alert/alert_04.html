@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>Heading</h2>
+	<button type="button" onclick="myfunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script>
+		function myfunction(){
+			var txt;
+			var person = prompt("Enter Your Name:", "Enter Your Name:");
+
+			if (person == null || person == ""){
+				txt = "Cancelled the prompt";
+			}
+			else {
+				txt = "Hello" + person + "how are you";
+			}
+			document.getElementById('demo').innerHTML= txt;
+		}
+	</script>
+
+</body>
+</html>

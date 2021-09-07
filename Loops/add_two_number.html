@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	First Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="first"><br><br>
+	Second number: &nbsp;&nbsp;&nbsp;<input type="text" id="second"><br><br>
+
+	<button onclick="add()">Add</button>
+	<input type="text" id="Answer" style="margin-left: 78px;">
+
+	<script>
+		function add(){
+			var a,b,c;
+			a=Number(document.getElementById("first").value);
+			b=Number(document.getElementById("second").value);
+			c= a + b;
+			document.getElementById("Answer").value=c;
+		}
+	</script>
+
+</body>
+</html>
